@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="day">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لكل كلمة حكاية | مكتبة ملك أحمد سامي</title>
+<meta name="description" content="مكتبة «لكل كلمة حكاية» الرقمية بإدارة ملك أحمد سامي — رفوف أدبية راقية للروايات والقصص والخواطر، وومضات حكيمة كل يوم.">
+<meta name="theme-color" content="#FFF9F1">
+<meta property="og:title" content="لكل كلمة حكاية | مكتبة رقمية">
+<meta property="og:description" content="حيث تُولد الكلمات حكايات — مكتبة رقمية راقية بإدارة ملك أحمد سامي.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FFF4E8'/%3E%3Cpath d='M10 42c6-3.4 14-3.4 22 1 8-4.4 16-4.4 22-1v12c-6-3.4-14-3.4-22 1-8-4.4-16-4.4-22-1z' fill='%23FFFDF8' stroke='%23C9A24B' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FFF4E8'/%3E%3Cpath d='M10 42c6-3.4 14-3.4 22 1 8-4.4 16-4.4 22-1v12c-6-3.4-14-3.4-22 1-8-4.4-16-4.4-22-1z' fill='%23FFFDF8' stroke='%23C9A24B' stroke-width='1.6'/%3E%3Cpath d='M32 43v12' stroke='%23C9A24B' stroke-width='1.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   1) المتغيرات والسمات
+============================================================ */
+:root{
+  --bg:#FFF9F1; --bg2:#FFF4E8; --surface:#FFFDF9; --surface2:#FFF8EE;
+  --ink:#5C4A3E; --muted:#8A7566; --line:rgba(201,162,75,.18);
+  --accent:#E88AA5; --accent-deep:#D96B8F;
+  --gold:#C9A24B; --gold-soft:#EAD9A8;
+  --pink:#F7CAD6; --peach:#FFD9C2; --sky:#D6EAFB; --mint:#DDF3E4; --lav:#E9E4FA; --butter:#FBF0C8;
+  --ok:#5FB884; --warn:#D99A3D; --err:#D96B6B;
+  --shadow:0 14px 34px -16px rgba(150,110,70,.28);
+  --shadow-lg:0 24px 50px -20px rgba(150,110,70,.35);
+  --r-lg:26px; --r-md:18px; --r-sm:12px;
+  --font-head:'Amiri',serif; --font-body:'Tajawal',sans-serif; --font-logo:'Aref Ruqaa',serif;
+}
+[data-theme="night"]{
+  --bg:#241C17; --bg2:#2B221C; --surface:#322820; --surface2:#3A2E25;
+  --ink:#F4E9DB; --muted:#C8B29E; --line:rgba(255,214,170,.16);
+  --shadow:0 14px 34px -16px rgba(0,0,0,.55);
+  --shadow-lg:0 24px 50px -20px rgba(0,0,0,.6);
+}
+/* ============================================================
+   2) أساسيات
+============================================================ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);line-height:1.8;overflow-x:hidden;transition:background .4s,color .4s}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(600px 400px at 85% -5%,rgba(247,202,214,.35),transparent 60%),
+             radial-gradient(700px 500px at 5% 20%,rgba(214,234,251,.35),transparent 60%),
+             radial-gradient(600px 500px at 50% 110%,rgba(223,243,228,.3),transparent 60%)}
+[data-theme="night"] body::before{opacity:.35}
+main,header,footer{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,textarea,select{font-family:inherit;font-size:1rem;color:var(--ink)}
+img{max-width:100%}
+::selection{background:var(--gold-soft);color:#5C4A3E}
+.container{width:min(1180px,92%);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.5}
+.icon{width:1.25em;height:1.25em;vertical-align:-.25em;flex:none}
+/* ============================================================
+   3) مكونات عامة
+============================================================ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.72rem 1.6rem;border-radius:999px;font-weight:700;font-size:.95rem;border:1.5px solid transparent;transition:.25s;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;box-shadow:0 10px 22px -10px var(--accent-deep)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 28px -12px var(--accent-deep)}
+.btn-ghost{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep);transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,#E9CF8E,#C9A24B);color:#4A3413;box-shadow:0 10px 22px -10px #C9A24B}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-wa{background:linear-gradient(135deg,#7BD88F,#3EB86A);color:#fff;box-shadow:0 10px 22px -10px #3EB86A}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-danger{background:#FBEAEA;color:#C05555;border-color:#F0C9C9}
+.btn-danger:hover{background:#F6DCDC}
+.btn-sm{padding:.45rem 1.05rem;font-size:.85rem}
+.btn-lg{padding:.95rem 2.2rem;font-size:1.05rem}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none!important}
+.chip{display:inline-flex;align-items:center;gap:.35rem;padding:.22rem .85rem;border-radius:999px;font-size:.8rem;font-weight:700}
+.chip-sky{background:var(--sky);color:#3A6E9E}.chip-pink{background:var(--pink);color:#B0526F}
+.chip-mint{background:var(--mint);color:#3E7E5A}.chip-lav{background:var(--lav);color:#6A57B8}
+.chip-butter{background:var(--butter);color:#9A7B1E}.chip-peach{background:var(--peach);color:#B06A35}
+.chip-gold{background:#F6ECD2;color:#8A6B1E}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.input,textarea.input,select.input{width:100%;padding:.8rem 1.1rem;border-radius:14px;border:1.5px solid var(--line);background:var(--surface);transition:.25s;outline:none}
+.input:focus{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+label.f{display:block;font-size:.85rem;font-weight:700;margin:0 0 .35rem;color:var(--muted)}
+.sec-head{text-align:center;margin-bottom:2.6rem}
+.sec-tag{display:inline-block;padding:.25rem 1rem;border-radius:999px;background:linear-gradient(135deg,var(--gold-soft),#F6ECD2);color:#8A6B1E;font-size:.8rem;font-weight:800;letter-spacing:.5px;margin-bottom:.8rem}
+.sec-title{font-size:clamp(1.7rem,4vw,2.5rem);color:var(--ink)}
+.sec-sub{color:var(--muted);max-width:640px;margin:.4rem auto 0}
+.orn{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-top:1rem;color:var(--gold)}
+.orn::before,.orn::after{content:'';height:1.5px;width:70px;background:linear-gradient(90deg,transparent,var(--gold));border-radius:2px}
+.orn::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.empty{padding:3.2rem 1.5rem;text-align:center;color:var(--muted)}
+.empty .big{font-size:3rem;margin-bottom:.6rem}
+/* ============================================================
+   4) الشريط العلوي والقائمة
+============================================================ */
+#progress{position:fixed;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--gold));z-index:200;width:0;transition:width .1s}
+header#navbar{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:1rem;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand-t{display:flex;flex-direction:column;line-height:1.25}
+.brand-t b{font-family:var(--font-logo);font-size:1.25rem;color:var(--ink)}
+.brand-t small{font-size:.68rem;color:var(--muted);letter-spacing:.5px}
+.nav-links{display:flex;gap:.2rem;margin-inline-start:auto}
+.nav-links a{padding:.5rem .95rem;border-radius:999px;font-weight:500;font-size:.95rem;color:var(--muted);transition:.25s}
+.nav-links a:hover{color:var(--accent-deep);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.nav-links a.on{color:var(--accent-deep);background:color-mix(in srgb,var(--accent) 14%,transparent);font-weight:700}
+.nav-acts{display:flex;align-items:center;gap:.5rem}
+.icon-btn{width:40px;height:40px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--line);background:var(--surface);transition:.25s}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent-deep);transform:translateY(-2px)}
+.burger{display:none}
+/* القائمة الجانبية للجوال */
+#overlay{position:fixed;inset:0;background:rgba(60,40,30,.35);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:.3s;z-index:150}
+#overlay.on{opacity:1;pointer-events:auto}
+#drawer{position:fixed;top:0;bottom:0;left:0;width:min(320px,84vw);background:var(--surface);z-index:160;transform:translateX(-108%);transition:transform .38s cubic-bezier(.22,.9,.3,1);padding:1.4rem;display:flex;flex-direction:column;gap:.3rem;box-shadow:var(--shadow-lg);border-right:1px solid var(--line)}
+#drawer.on{transform:none}
+#drawer .d-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+#drawer a.d-link{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;border-radius:14px;font-weight:500;color:var(--ink);transition:.2s}
+#drawer a.d-link:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent-deep)}
+#drawer .d-sec{margin-top:auto;padding-top:1rem;border-top:1px dashed var(--line);display:flex;gap:.5rem}
+/* ============================================================
+   5) البطل (Hero)
+============================================================ */
+.hero{position:relative;padding:5.5rem 0 4.5rem;text-align:center;overflow:hidden}
+.hero-logo{margin-bottom:1.2rem;animation:floaty 5s ease-in-out infinite}
+.hero-title{font-size:clamp(2.6rem,7vw,4.6rem);color:var(--ink);letter-spacing:.5px}
+.hero-title .grad{background:linear-gradient(120deg,var(--accent-deep),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{max-width:640px;margin:1rem auto 0;color:var(--muted);font-size:1.1rem}
+.hero-cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.hero-stats{display:flex;gap:2.4rem;justify-content:center;margin-top:2.6rem;flex-wrap:wrap}
+.hstat b{display:block;font-family:var(--font-head);font-size:1.9rem;color:var(--accent-deep)}
+.hstat span{font-size:.85rem;color:var(--muted)}
+.hero-deco{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hd{position:absolute;opacity:.85;animation:floaty 6s ease-in-out infinite}
+.scroll-ind{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.35rem;color:var(--muted);font-size:.8rem}
+.mouse{width:26px;height:42px;border:2px solid var(--gold);border-radius:14px;display:flex;justify-content:center;padding-top:7px}
+.wheel{width:4px;height:9px;border-radius:4px;background:var(--gold);animation:wheel 1.6s ease-in-out infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+/* ============================================================
+   6) الشريط المتحرك (Marquee)
+============================================================ */
+.marquee{overflow:hidden;background:linear-gradient(90deg,var(--butter),var(--pink),var(--sky),var(--mint));border-block:1px solid var(--line);padding:.7rem 0;direction:ltr}
+.mq-track{display:flex;gap:2.6rem;width:max-content;animation:mq 26s linear infinite}
+.mq-track span{display:flex;align-items:center;gap:2.6rem;font-family:var(--font-head);font-size:1.05rem;color:#7A5A2E;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ============================================================
+   7) الأقسام والكتب
+============================================================ */
+section.block{padding:4.2rem 0}
+.block.tint-sky{background:color-mix(in srgb,var(--sky) 30%,var(--bg))}
+.block.tint-lav{background:color-mix(in srgb,var(--lav) 34%,var(--bg))}
+.block.tint-mint{background:color-mix(in srgb,var(--mint) 32%,var(--bg))}
+.block.tint-butter{background:color-mix(in srgb,var(--butter) 34%,var(--bg))}
+.books-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.6rem}
+.book-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column}
+.book-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.bc-cover{position:relative;padding:1rem 1rem 0}
+.bc-body{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.bc-title{font-size:1.2rem;text-align:center}
+.bc-meta{display:flex;justify-content:center;gap:.4rem;flex-wrap:wrap}
+.bc-actions{display:flex;gap:.5rem;margin-top:auto;padding-top:.6rem}
+.bc-actions .btn{flex:1}
+.heart{position:absolute;top:1.5rem;inset-inline-end:1.5rem;width:38px;height:38px;border-radius:50%;background:color-mix(in srgb,var(--surface) 85%,transparent);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:.25s;z-index:2;border:1px solid var(--line)}
+.heart:hover{transform:scale(1.12);color:var(--accent-deep)}
+.heart.on{color:#E05C7E;background:#FDECEF}
+/* الأغلفة */
+.cover{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 10px 22px -12px rgba(120,80,40,.4);border:1px solid rgba(201,162,75,.3)}
+.cover::before{content:'';position:absolute;inset:9px;border:1.5px dashed rgba(255,255,255,.65);border-radius:12px;pointer-events:none}
+.cover::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(255,255,255,.5),transparent 42%),radial-gradient(rgba(255,255,255,.28) 1.2px,transparent 1.3px);background-size:auto,16px 16px;pointer-events:none}
+.cover-inner{position:relative;z-index:1;text-align:center;padding:1.4rem 1rem;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+.cover-kicker{font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.92);font-weight:700}
+.cover-title{font-family:var(--font-head);font-size:1.45rem;color:#fff;text-shadow:0 2px 10px rgba(90,40,60,.25);line-height:1.55}
+.cover-author{font-size:.72rem;color:rgba(255,255,255,.92)}
+.cover-star{position:absolute;color:rgba(255,255,255,.85)}
+.cv-rose{background:linear-gradient(160deg,#F7CAD6,#E88AA5 55%,#D96B8F)}
+.cv-peach{background:linear-gradient(160deg,#FFE3D0,#F2A56F 55%,#E08A4C)}
+.cv-sky{background:linear-gradient(160deg,#D6EAFB,#7FB6E4 55%,#5A97D4)}
+.cv-mint{background:linear-gradient(160deg,#DDF3E4,#8FD0A8 55%,#5FB884)}
+.cv-lav{background:linear-gradient(160deg,#E9E4FA,#B3A4E8 55%,#937FD8)}
+.cv-butter{background:linear-gradient(160deg,#FBF0C8,#E8CE7E 55%,#C9A24B)}
+/* تفاصيل الكتاب */
+.bd-wrap{display:grid;grid-template-columns:320px 1fr;gap:2.6rem;align-items:start}
+.bd-cover{position:sticky;top:96px}
+.bd-info h1{font-size:2.3rem;margin-bottom:.4rem}
+.bd-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0}
+.bd-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:1.2rem 1.4rem;margin-top:1rem}
+.bd-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
+.alert{display:flex;gap:.7rem;align-items:flex-start;border-radius:var(--r-md);padding:1rem 1.2rem;margin:1rem 0;border:1.5px solid;font-size:.95rem}
+.alert-warn{background:#FFF6E0;border-color:#EFD9A0;color:#8A6B1E}
+.alert-err{background:#FDECEC;border-color:#F2C0C0;color:#A04444}
+.alert-ok{background:#E9F7EE;border-color:#C4E6CF;color:#3E7E5A}
+[data-theme="night"] .alert-warn{background:#3A2F1A;color:#E8CE7E;border-color:#5A4A22}
+[data-theme="night"] .alert-err{background:#3A2222;color:#F0A0A0;border-color:#5A2C2C}
+[data-theme="night"] .alert-ok{background:#1E3328;color:#9BD8B0;border-color:#2C4A38}
+/* القراءة */
+.reader-bar{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:1rem}
+.reader-frame{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg);background:var(--surface)}
+.reader-frame iframe{width:100%;height:78vh;border:0;display:block}
+/* ============================================================
+   8) الأقوال والفريق والعناصر الأدبية
+============================================================ */
+.qod{max-width:760px;margin:0 auto;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:3rem 2rem;box-shadow:var(--shadow);position:relative}
+.qod .q-mark{font-family:var(--font-head);font-size:4rem;color:var(--gold);line-height:1;opacity:.5}
+.qod blockquote{font-family:var(--font-head);font-size:clamp(1.4rem,3.4vw,2rem);line-height:1.9;color:var(--ink)}
+.qod .q-src{margin-top:1.2rem;color:var(--muted);font-size:.9rem}
+.quotes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.6rem}
+.quote-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.8rem;box-shadow:var(--shadow);position:relative;transition:.3s}
+.quote-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.quote-card p{font-family:var(--font-head);font-size:1.2rem;line-height:1.9}
+.quote-card .q-src{margin-top:1rem;font-size:.82rem;color:var(--muted)}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.4rem}
+.team-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.8rem 1.2rem;text-align:center;box-shadow:var(--shadow);transition:.3s}
+.team-card:hover{transform:translateY(-6px)}
+.team-card.owner{border-color:var(--gold);background:linear-gradient(180deg,#FFFDF6,var(--surface))}
+.avatar{width:74px;height:74px;border-radius:50%;margin:0 auto .9rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:1.7rem;color:#fff;box-shadow:var(--shadow)}
+.team-card .nm{font-weight:800;font-size:1.05rem;white-space:nowrap}
+.team-card .rl{margin-top:.4rem}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;margin-top:2rem}
+.value-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.8rem;text-align:center;box-shadow:var(--shadow)}
+.value-card .vi{width:56px;height:56px;border-radius:18px;margin:0 auto .9rem;display:flex;align-items:center;justify-content:center}
+/* ============================================================
+   9) النماذج والمصادقة
+============================================================ */
+.auth-wrap{max-width:440px;margin:3rem auto}
+.auth-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:2.4rem;box-shadow:var(--shadow-lg)}
+.auth-card h1{text-align:center;font-size:1.9rem;margin-bottom:.3rem}
+.auth-card .sub{text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:1.6rem}
+.f-row{margin-bottom:1.1rem}
+.f-err{color:#C05555;font-size:.8rem;margin-top:.3rem;display:none}
+.f-err.on{display:block}
+.form-foot{margin-top:1.4rem}
+.form-foot .btn{width:100%}
+.auth-alt{text-align:center;margin-top:1.2rem;font-size:.9rem;color:var(--muted)}
+.auth-alt a{color:var(--accent-deep);font-weight:700}
+.setup-card{background:#FFF6E0;border:1.5px dashed #E3C87E;border-radius:var(--r-md);padding:1rem 1.2rem;margin-bottom:1.4rem;font-size:.85rem;color:#8A6B1E}
+[data-theme="night"] .setup-card{background:#3A2F1A;color:#E8CE7E;border-color:#5A4A22}
+/* ============================================================
+   10) لوحة التحكم
+============================================================ */
+.admin-wrap{display:grid;grid-template-columns:250px 1fr;gap:1.6rem;align-items:start;padding:2.4rem 0 4rem}
+.admin-side{position:sticky;top:90px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.2rem;box-shadow:var(--shadow)}
+.admin-side .a-brand{display:flex;align-items:center;gap:.6rem;padding:.4rem .6rem 1rem;border-bottom:1px dashed var(--line);margin-bottom:.8rem;font-family:var(--font-logo);font-size:1.1rem}
+.atab{display:flex;align-items:center;gap:.6rem;width:100%;text-align:right;padding:.7rem .9rem;border-radius:12px;font-weight:500;color:var(--muted);transition:.2s;margin-bottom:.2rem}
+.atab:hover{background:color-mix(in srgb,var(--accent) 10%,transparent);color:var(--ink)}
+.atab.on{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;font-weight:700}
+.admin-main{min-width:0}
+.admin-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.admin-head h1{font-size:1.8rem}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.1rem;margin-bottom:1.8rem}
+.stat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:1.3rem;box-shadow:var(--shadow);text-align:center}
+.stat-card b{display:block;font-family:var(--font-head);font-size:2rem;color:var(--accent-deep)}
+.stat-card span{font-size:.82rem;color:var(--muted)}
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow)}
+.tbl{width:100%;border-collapse:collapse;min-width:640px}
+.tbl th,.tbl td{padding:.85rem 1rem;text-align:right;border-bottom:1px solid var(--line);font-size:.92rem}
+.tbl th{background:var(--surface2);color:var(--muted);font-size:.8rem}
+.tbl tr:last-child td{border-bottom:0}
+.tbl .mini-cover{width:44px;height:60px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-head);font-size:.65rem;text-align:center;padding:4px;box-shadow:var(--shadow)}
+.row-acts{display:flex;gap:.35rem;flex-wrap:wrap}
+.badge{display:inline-block;padding:.15rem .7rem;border-radius:999px;font-size:.75rem;font-weight:700}
+.b-ok{background:var(--mint);color:#3E7E5A}.b-hide{background:#EFE6DA;color:#8A7566}
+.b-pend{background:var(--butter);color:#9A7B1E}.b-err{background:#FBE0E0;color:#B05252}
+.b-owner{background:#F6ECD2;color:#8A6B1E}.b-asst{background:var(--lav);color:#6A57B8}.b-reader{background:var(--sky);color:#3A6E9E}
+.admin-note{font-size:.82rem;color:var(--muted);background:var(--surface2);border:1px dashed var(--line);border-radius:var(--r-sm);padding:.7rem 1rem;margin-top:1rem}
+/* ============================================================
+   11) النوافذ والتنبيهات
+============================================================ */
+#modalRoot:empty{display:none}
+.modal-ov{position:fixed;inset:0;background:rgba(70,45,35,.4);backdrop-filter:blur(4px);z-index:300;display:flex;align-items:center;justify-content:center;padding:1rem;animation:fadeIn .25s}
+.modal{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);width:min(560px,100%);max-height:88vh;overflow-y:auto;padding:1.8rem;animation:pop .3s cubic-bezier(.2,.9,.3,1.2)}
+.modal h3{font-size:1.4rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
+.modal .m-acts{display:flex;gap:.7rem;margin-top:1.4rem}
+.modal .m-acts .btn{flex:1}
+@keyframes pop{from{transform:scale(.92) translateY(14px);opacity:0}}
+@keyframes fadeIn{from{opacity:0}}
+#toastRoot{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:400;display:flex;flex-direction:column;gap:.6rem;align-items:center;pointer-events:none}
+.toast{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;box-shadow:var(--shadow-lg);padding:.8rem 1.4rem;font-weight:700;font-size:.92rem;display:flex;align-items:center;gap:.6rem;opacity:0;transform:translateY(-14px);transition:.35s;max-width:90vw}
+.toast.show{opacity:1;transform:none}
+.toast.ok{border-color:#BFE3CC;color:#3E7E5A}.toast.err{border-color:#F0C0C0;color:#B05252}.toast.warn{border-color:#EBD9A8;color:#9A7B1E}
+/* ============================================================
+   12) التذييل وزر واتساب
+============================================================ */
+footer{background:var(--surface);border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+.f-grid h4{font-size:1.1rem;margin-bottom:.9rem}
+.f-grid a{display:block;padding:.25rem 0;color:var(--muted);transition:.2s}
+.f-grid a:hover{color:var(--accent-deep)}
+.f-team{margin-top:1rem;font-size:.85rem;color:var(--muted);line-height:2}
+.f-bottom{border-top:1px dashed var(--line);margin-top:2rem;padding-top:1.4rem;text-align:center;color:var(--muted);font-size:.85rem}
+#waFab{position:fixed;bottom:22px;left:22px;z-index:120;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#5BE38A,#3EB86A);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -8px rgba(62,184,106,.6);transition:.3s}
+#waFab:hover{transform:translateY(-4px) scale(1.05)}
+#waFab::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid #3EB86A;animation:pulse 2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.35);opacity:0}}
+/* ============================================================
+   13) الاستجابة
+============================================================ */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .burger{display:inline-flex}
+  .bd-wrap{grid-template-columns:1fr}
+  .bd-cover{position:static;max-width:280px;margin:0 auto}
+  .admin-wrap{grid-template-columns:1fr}
+  .admin-side{position:static;display:flex;overflow-x:auto;gap:.4rem;align-items:center}
+  .admin-side .a-brand{border:0;padding:.4rem .6rem;margin:0;white-space:nowrap}
+  .atab{white-space:nowrap;margin:0}
+  .f-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .hero{padding:3.5rem 0 3.5rem}
+  .hero-stats{gap:1.4rem}
+  .auth-card{padding:1.6rem}
+  .books-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .cover-title{font-size:1.1rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<header id="navbar"></header>
+<div id="overlay"></div>
+<aside id="drawer"></aside>
+<main id="app"></main>
+<footer id="footer"></footer>
+<a id="waFab" href="https://chat.whatsapp.com/FP3qSMHC4oE5xHwIvg8ZmZ?s=cl&p=a&mlu=1" target="_blank" rel="noopener" aria-label="تابعنا على واتساب"></a>
+<div id="modalRoot"></div>
+<div id="toastRoot"></div>
+<noscript><div style="padding:2rem;text-align:center;font-family:sans-serif">يرجى تفعيل JavaScript لاستخدام المكتبة.</div></noscript>
+
+<script>
+/* ============================================================
+   1) الأيقونات (SVG مضمّن — لا صور خارجية)
+============================================================ */
+const I = {
+  home:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>',
+  book:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>',
+  quote:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7a3 3 0 0 1-3 3"/><path d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7a3 3 0 0 1-3 3"/></svg>',
+  info:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="8" r=".6" fill="currentColor"/></svg>',
+  team:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M16 15.2c2.6.3 4.7 1.9 5.5 4.8"/></svg>',
+  mail:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>',
+  user:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c1-3.8 4-6 7.5-6s6.5 2.2 7.5 6"/></svg>',
+  heart:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 12 6.7a4.6 4.6 0 0 1 8.5 2.9c0 5.9-8.5 10.9-8.5 10.9z"/></svg>',
+  heartFill:'<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 12 6.7a4.6 4.6 0 0 1 8.5 2.9c0 5.9-8.5 10.9-8.5 10.9z"/></svg>',
+  sun:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>',
+  moon:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>',
+  menu:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  close:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>',
+  wa:'<svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>',
+  check:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>',
+  warn:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.5 20h19L12 3z"/><path d="M12 10v4.5"/><circle cx="12" cy="17.4" r=".5" fill="currentColor"/></svg>',
+  trash:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13"/><path d="M10 11v5M14 11v5"/></svg>',
+  edit:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5.5 18.5 9.5 8 20H4v-4L14.5 5.5z"/><path d="m12.5 7.5 4 4"/></svg>',
+  plus:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+  eye:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+  eyeOff:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16"/><path d="M9.9 5.9A9.5 9.5 0 0 1 12 5.5c6 0 9.5 6.5 9.5 6.5a17 17 0 0 1-3 3.7M6 7.5A16.6 16.6 0 0 0 2.5 12S6 18.5 12 18.5c1.4 0 2.7-.3 3.8-.8"/></svg>',
+  shield:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20 6v6c0 5-3.5 8-8 9.5C7.5 20 4 17 4 12V6l8-3.5z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg>',
+  log:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/></svg>',
+  gear:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.3 1a7 7 0 0 0-2-1.2L14.2 3h-4l-.4 2.7a7 7 0 0 0-2 1.2l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2.4l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 2 1.2l.4 2.7h4l.4-2.7a7 7 0 0 0 2-1.2l2.3 1 2-3.4-2-1.5c.1-.4.1-.8.1-1.2z"/></svg>',
+  users:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M17.5 15.4c2.3.7 3.7 2.2 4 4.6"/></svg>',
+  msg:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H4l2.3-2.9A8 8 0 1 1 21 12z"/></svg>',
+  search:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4.6-4.6"/></svg>',
+  dl:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/></svg>',
+  ext:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M20 14v5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19V6a1.5 1.5 0 0 1 1.5-1.5H10"/></svg>',
+  back:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l-7 7 7 7"/><path d="M2 12h20"/></svg>',
+  star:'<svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg>',
+  spark:'<svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3 7.2 8 8-5 .8-7.4 3.2-8 8-.6-4.8-3-7.2-8-8 5-.8 7.4-3.2 8-8z"/></svg>',
+  lock:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+  logout:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4H6v16h8"/><path d="M10 12h11"/><path d="m17 8 4 4-4 4"/></svg>',
+  refresh:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 3v4h-4"/></svg>'
+};
+const logoSVG = (s=44)=>`<svg width="${s}" height="${s}" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+<defs><linearGradient id="lg${s}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CAD6"/><stop offset="1" stop-color="#E88AA5"/></linearGradient></defs>
+<path d="M32 5c8.8 0 16 5.4 16 12 0 4.6-2.9 8.3-7.2 10.2l-.8 3.1c-.3 1-.5 1.7-1.6 1.7h-8.8c-1.1 0-1.3-.7-1.6-1.7l-.8-3.1C18.9 35.5 16 31.8 16 27c0-6.6 7.2-12 16-12z" fill="url(#lg${s})" stroke="#C9A24B" stroke-width="1.3"/>
+<path d="M32 19l1.7 3.7 4.1.5-3 2.8.8 4.1-3.6-1.9-3.6 1.9.8-4.1-3-2.8 4.1-.5z" fill="#C9A24B"/>
+<path d="M10 41c6-3.4 14-3.4 22 1 8-4.4 16-4.4 22-1v12c-6-3.4-14-3.4-22 1-8-4.4-16-4.4-22-1z" fill="#FFFDF8" stroke="#C9A24B" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M32 42v11" stroke="#C9A24B" stroke-width="1.3"/>
+<path d="M16 46c4-1.6 8-1.6 12 .5M16 50c4-1.6 8-1.6 12 .5M36 50.5c4-2.1 8-2.1 12-.5M36 46c4-2.1 8-2.1 12-.5" stroke="#E4C98A" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M53 6l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="#E8C877"/></svg>`;
+
+/* ============================================================
+   2) أدوات مساعدة
+============================================================ */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const fmtDate=t=>new Date(t).toLocaleDateString('ar-EG',{year:'numeric',month:'long',day:'numeric'});
+const go=h=>{location.hash=h;};
+function toast(msg,type='ok'){const t=document.createElement('div');t.className='toast '+type;t.innerHTML=(type==='ok'?I.check:type==='err'?I.warn:I.spark)+'<span>'+esc(msg)+'</span>';$('#toastRoot').appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),400)},3400);}
+function openModal(html){$('#modalRoot').innerHTML=`<div class="modal-ov" data-act="modal-ov"><div class="modal" role="dialog" aria-modal="true">${html}</div></div>`;document.body.style.overflow='hidden';}
+function closeModal(){$('#modalRoot').innerHTML='';document.body.style.overflow='';}
+let confirmCb=null;
+function askConfirm(title,msg,okLabel,cb){confirmCb=cb;openModal(`<h3>${I.warn} ${esc(title)}</h3><p style="color:var(--muted)">${esc(msg)}</p><div class="m-acts"><button class="btn btn-ghost" data-act="modal-close">إلغاء</button><button class="btn btn-danger" data-act="confirm-yes">${esc(okLabel)}</button></div>`);}
+/* تجزئة كلمات المرور (ملح + تكرار) — ملاحظة: في الإنتاج يجب أن تتم على الخادم بـ bcrypt/argon2 */
+async function hashPw(pw,salt){
+  const str=salt+':'+pw;
+  try{
+    if(window.crypto&&crypto.subtle){
+      const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(str));
+      return 'sha256:'+[...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
+    }
+  }catch(e){}
+  let h1=0xdeadbeef,h2=0x41c6ce57;
+  for(let i=0;i<str.length;i++){const ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677);}
+  h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);
+  h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);
+  return 'fb:'+(h2>>>0).toString(16)+(h1>>>0).toString(16);
+}
+
+/* ============================================================
+   3) قاعدة البيانات (محلية دائمة) + البذور
+============================================================ */
+const DB_KEY='kkh_db_v3', SES_KEY='kkh_session';
+const CATS=['روايات','قصص','أدب','كتب الأطفال','تشويق','خواطر'];
+const COVERS={rose:'وردي',peach:'خوخي',sky:'سماوي',mint:'نعناعي',lav:'لافندر',butter:'زبدي'};
+const ACCENTS={rose:['#E88AA5','#D96B8F'],peach:['#F2A56F','#E08A4C'],sky:['#7FB6E4','#5A97D4'],mint:['#8FD0A8','#5FB884'],lav:['#B3A4E8','#937FD8'],gold:['#E3C877','#C9A24B']};
+function seed(){
+  const now=Date.now();
+  return {
+    v:3,
+    users:[
+      {id:'u-owner',name:'ملك أحمد سامي',email:'queen@kkh.local',pass:null,salt:'s-own-7x',role:'owner',active:true,mustChange:true,fails:0,lockedUntil:0,createdAt:now,lastLogin:0},
+      {id:'u-asst',name:'مصطفى حواس',email:'mostafa@kkh.local',pass:null,salt:'s-ast-3q',role:'assistant',active:true,mustChange:true,fails:0,lockedUntil:0,createdAt:now,lastLogin:0}
+    ],
+    books:[
+      {id:'b-khater',title:'خاطر مميت',author:null,category:'خواطر',description:null,cover:'rose',
+       fileType:'drive',fileUrl:'https://drive.google.com/file/d/12rgh0pTMmetwDwkaE1KLiGdhvUPDjxdm/view?usp=drivesdk',
+       fileId:'12rgh0pTMmetwDwkaE1KLiGdhvUPDjxdm',fileName:'خاطر مميت.pdf',
+       status:'published',verified:'pending',addedBy:'u-owner',views:0,createdAt:now}
+    ],
+    quotes:[
+      {id:'q1',text:'في كلِّ كلمةٍ بذرةُ حكايةٍ؛ فإنْ صغُرَتِ الكلمةُ كَبُرَ ما تحمله من أسرار.',source:'نصٌّ أصلي — فريق المكتبة',status:'published',createdAt:now},
+      {id:'q2',text:'الخواطرُ مثلُ النجومِ: لا تُلامسُها اليدُ، لكنّها تُنيرُ الدربَ لمن يرفع بصره.',source:'نصٌّ أصلي — فريق المكتبة',status:'published',createdAt:now},
+      {id:'q3',text:'اقرأْ قليلًا كلَّ يومٍ؛ فالكتابُ الجيّدُ صديقٌ لا يملُّ أبدًا.',source:'نصٌّ أصلي — فريق المكتبة',status:'published',createdAt:now}
+    ],
+    messages:[],activity:[],favorites:{},resets:[],
+    team:[
+      {name:'ملك أحمد سامي',role:'المديرة',c:'rose'},
+      {name:'مصطفى حواس',role:'المساعد الأساسي',c:'sky'},
+      {name:'مريم طارق',role:'مساعدة',c:'mint'},
+      {name:'حبيب رؤوف',role:'مساعد',c:'peach'},
+      {name:'جوليا جاد',role:'مساعدة',c:'pink'}
+    ],
+    settings:{
+      siteName:'لكل كلمة حكاية',
+      heroSub:'حيث تُولد الكلماتُ حكاياتٍ... مكتبةٌ رقميةٌ راقيةٌ تجمعُ الروائعَ الأدبيةَ والخواطرَ الصادقةَ في مكانٍ واحدٍ دافئ.',
+      aboutTitle:'عن مكتبة «لكل كلمة حكاية»',
+      aboutText:'وُلدت مكتبة «لكل كلمة حكاية» من إيمانٍ بأنّ لكلِّ كلمةٍ حكايةً تستحقُّ أن تُروى. تدير المكتبة الأديبة ملك أحمد سامي بمساعدةٍ من فريقِها الأعزّاء، وتُقدِّم رفوفًا رقميّةً راقيةً للروايات والقصص والخواطر والأعمالِ الأدبية، بشرطٍ واحدٍ: أن يكون كلُّ كتابٍ موجودًا هنا بإذنٍ رسميٍّ من صاحبه.\n\nنحن لا نختلق ما لم يُكتب، ولا ننسب حكايةً إلى غيرِ صاحبها؛ فالمكتبة تنمو فقط بما تُضيفه الإدارةُ من كتبٍ وأقوالٍ موثوقة، كتابًا كتابًا، وكلمةً كلمة.',
+      accent:'rose',
+      sections:{books:{show:true,order:1},quotes:{show:true,order:2},team:{show:true,order:3},about:{show:true,order:4}},
+      whatsapp:'https://chat.whatsapp.com/FP3qSMHC4oE5xHwIvg8ZmZ?s=cl&p=a&mlu=1',
+      email:'',instagram:''
+    }
+  };
+}
+let db;
+try{db=JSON.parse(localStorage.getItem(DB_KEY))||null;}catch(e){db=null;}
+if(!db||db.v!==3){db=seed();localStorage.setItem(DB_KEY,JSON.stringify(db));}
+if(db.teamV!==2){db.team=seed().team;db.teamV=2;localStorage.setItem(DB_KEY,JSON.stringify(db));} /* تحديث أسماء المساعدين دون مسح الحسابات */
+function save(){localStorage.setItem(DB_KEY,JSON.stringify(db));}
+/* تجزئة كلمات البذور الأولية */
+async function initSeeds(){
+  for(const u of db.users){if(!u.pass){u.pass=await hashPw(u.role==='owner'?'Malik-2024!':'Mustafa-2024!',u.salt);}}
+  save();
+}
+const curUser=()=>db.users.find(u=>u.id===localStorage.getItem(SES_KEY))||null;
+const isStaff=()=>{const u=curUser();return u&&(u.role==='owner'||u.role==='assistant')&&u.active;};
+const isOwner=()=>{const u=curUser();return u&&u.role==='owner'&&u.active;};
+const bookById=id=>db.books.find(b=>b.id===id);
+const isFav=bid=>{const u=curUser();return u&&(db.favorites[u.id]||[]).includes(bid);};
+function logAct(act){db.activity.unshift({id:uid(),by:curUser()?curUser().name:'زائر',act,at:Date.now()});db.activity=db.activity.slice(0,250);save();}
+function applyAccent(){const a=ACCENTS[db.settings.accent]||ACCENTS.rose;const r=document.documentElement.style;r.setProperty('--accent',a[0]);r.setProperty('--accent-deep',a[1]);}
+function applyTheme(t){document.documentElement.dataset.theme=t;localStorage.setItem('kkh_theme',t);}
+
+/* ============================================================
+   4) التحقق من روابط Google Drive
+============================================================ */
+async function driveReachable(id){
+  try{
+    const c=new AbortController();const t=setTimeout(()=>c.abort(),9000);
+    await fetch('https://drive.google.com/uc?export=open&id='+id,{mode:'no-cors',signal:c.signal,cache:'no-store'});
+    clearTimeout(t);return true;
+  }catch(e){return false;}
+}
+async function autoCheckDrive(){
+  try{
+    for(const b of db.books.filter(b=>b.fileType==='drive'&&b.status==='published'&&b.verified!=='ok')){
+      const ok=await driveReachable(b.fileId);
+      b.verified=ok?'ok':'error';
+      if(!ok)logAct('تعذّر الوصول إلى ملف «'+b.title+'» — يلزم تعديل صلاحيات المشاركة');
+    }
+    save();
+  }catch(e){}
+}
+function extractDriveId(url){
+  if(!url)return null;
+  const m=String(url).match(/file\/d\/([A-Za-z0-9_-]+)/)||String(url).match(/[?&]id=([A-Za-z0-9_-]+)/);
+  return m?m[1]:null;
+}
+
+/* ============================================================
+   5) المصادقة (تسجيل/دخول/خروج/استعادة)
+============================================================ */
+async function doRegister(name,email,pass){
+  name=(name||'').trim();email=(email||'').trim().toLowerCase();
+  if(name.length<3)return{ok:0,msg:'الاسم يجب أن يكون 3 أحرف على الأقل.'};
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))return{ok:0,msg:'يرجى إدخال بريد إلكتروني صحيح.'};
+  if(!/(?=.*[A-Za-z])(?=.*\d).{8,}/.test(pass))return{ok:0,msg:'كلمة المرور: 8 أحرف على الأقل مع حرفٍ ورقم.'};
+  if(db.users.some(u=>u.email===email))return{ok:0,msg:'هذا البريد مسجّلٌ بالفعل — جرّب تسجيل الدخول.'};
+  const salt='s-'+uid();
+  db.users.push({id:uid(),name,email,pass:await hashPw(pass,salt),salt,role:'reader',active:true,mustChange:false,fails:0,lockedUntil:0,createdAt:Date.now(),lastLogin:0});
+  save();logAct('تسجيل حساب جديد: '+name);
+  return{ok:1};
+}
+async function doLogin(email,pass){
+  email=(email||'').trim().toLowerCase();
+  const u=db.users.find(x=>x.email===email);
+  if(!u||!u.active)return{ok:0,msg:'بيانات الدخول غير صحيحة.'};
+  if(u.lockedUntil&&Date.now()<u.lockedUntil)return{ok:0,msg:'الحساب موقوف مؤقتًا — حاول بعد دقائق.',lock:u.lockedUntil};
+  if(await hashPw(pass,u.salt)!==u.pass){
+    u.fails=(u.fails||0)+1;
+    if(u.fails>=5){u.lockedUntil=Date.now()+5*60*1000*(u.fails-4);logAct('توقيف مؤقت لحساب '+u.email+' بعد محاولات متكررة');}
+    save();
+    return{ok:0,msg:'بيانات الدخول غير صحيحة.',fails:u.fails};
+  }
+  u.fails=0;u.lastLogin=Date.now();save();
+  localStorage.setItem(SES_KEY,u.id);
+  logAct('تسجيل دخول: '+u.name);
+  return{ok:1,user:u};
+}
+function doLogout(){localStorage.removeItem(SES_KEY);logAct('تسجيل خروج');toast('تم تسجيل الخروج — إلى اللقاء');go('#/);}
+function sendReset(email){
+  email=(email||'').trim().toLowerCase();
+  const u=db.users.find(x=>x.email===email);
+  if(!u)return{ok:1,msg:'إذا كان البريد مسجّلًا فستصلك رابط الاستعادة shortly.'};
+  const token=uid()+uid();
+  db.resets.push({token,email,exp:Date.now()+30*60*1000,used:false});
+  save();
+  return{ok:1,token,msg:'تم إنشاء رابط الاستعادة (عرض تجريبي — في الإنتاج يُرسل إلى بريدك).'};
+}
+function doReset(token,pass){
+  const r=db.resets.find(x=>x.token===token&&!x.used&&x.exp>Date.now());
+  if(!r)return{ok:0,msg:'الرابط غير صالح أو منتهٍ.'};
+  if(!/(?=.*[A-Za-z])(?=.*\d).{8,}/.test(pass))return{ok:0,msg:'كلمة المرور: 8 أحرف على الأقل مع حرفٍ ورقم.'};
+  const u=db.users.find(x=>x.email===r.email);
+  if(u){u.salt='s-'+uid();u.pass=null;u.mustChange=false;/* يُعاد تجزئتها أدناه */}
+  r.used=true;save();
+  return{ok:1};
+}
+async function finalizeReset(token,pass){
+  const r=db.resets.find(x=>x.token===token&&!x.used&&x.exp>Date.now());
+  if(!r)return{ok:0,msg:'الرابط غير صالح أو منتهٍ.'};
+  if(!/(?=.*[A-Za-z])(?=.*\d).{8,}/.test(pass))return{ok:0,msg:'كلمة المرور: 8 أحرف على الأقل مع حرفٍ ورقم.'};
+  const u=db.users.find(x=>x.email===r.email);
+  if(u){u.salt='s-'+uid();u.pass=await hashPw(pass,u.salt);u.mustChange=false;u.fails=0;}
+  r.used=true;save();logAct('إعادة تعيين كلمة المرور لحساب '+(u?u.email:r.email));
+  return{ok:1};
+}
+
+/* ============================================================
+   6) المكوّنات المشتركة
+============================================================ */
+function coverHTML(b,cls=''){
+  const deco=`<svg class="cover-star" style="top:12%;inset-inline-start:14%;width:20px" viewBox="0 0 24 24" fill="rgba(255,255,255,.8)"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+  <svg class="cover-star" style="bottom:16%;inset-inline-end:12%;width:14px" viewBox="0 0 24 24" fill="rgba(255,255,255,.7)"><path d="M12 2c.6 4.8 3 7.2 8 8-5 .8-7.4 3.2-8 8-.6-4.8-3-7.2-8-8 5-.8 7.4-3.2 8-8z"/></svg>`;
+  return `<div class="cover ${cls} cv-${b.cover||'rose'}">${deco}<div class="cover-inner"><span class="cover-kicker">مكتبة لكل كلمة حكاية</span><span class="cover-title">${esc(b.title)}</span><span class="cover-author">${b.author?esc(b.author):'مؤلّفه يُحدَّد لاحقًا'}</span></div></div>`;
+}
+function bookCard(b){
+  const fav=isFav(b.id);
+  return `<article class="book-card reveal">
+    <div class="bc-cover">${coverHTML(b)}
+      <button class="heart ${fav?'on':''}" data-act="fav" data-id="${b.id}" aria-label="إضافة إلى المفضلة">${fav?I.heartFill:I.heart}</button>
+    </div>
+    <div class="bc-body">
+      <h3 class="bc-title">${esc(b.title)}</h3>
+      <div class="bc-meta"><span class="chip chip-sky">${esc(b.category)}</span></div>
+      <div class="bc-actions">
+        <a class="btn btn-sm btn-primary" href="#/book/${b.id}">التفاصيل</a>
+        <button class="btn btn-sm btn-ghost" data-act="read" data-id="${b.id}">اقرأ الآن</button>
+      </div>
+    </div></article>`;
+}
+const ornSVG=`<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3 7.2 8 8-5 .8-7.4 3.2-8 8-.6-4.8-3-7.2-8-8 5-.8 7.4-3.2 8-8z"/></svg>`;
+const secHead=(tag,title,sub='')=>`<div class="sec-head reveal"><span class="sec-tag">${tag}</span><h2 class="sec-title">${title}</h2>${sub?`<p class="sec-sub">${sub}</p>`:''}<div class="orn">${ornSVG}</div></div>`;
+function staffBanner(){
+  if(!isStaff())return'';
+  const bad=db.books.filter(b=>b.fileType==='drive'&&b.status==='published'&&b.verified==='error');
+  if(!bad.length)return'';
+  return `<div class="container"><div class="alert alert-err reveal">${I.warn}<div><b>تنبيه للمديرة:</b> تعذّر الوصول إلى ملف «${esc(bad.map(b=>b.title).join('»، «'))}». يُرجى تعديل صلاحيات المشاركة في Google Drive أو رفع الملف من لوحة التحكم.</div></div></div>`;
+}
+function marquee(){
+  const items=['لكل كلمة حكاية','اقرأ','تأمّل','احكِ','خاطر مميت','حكاية تُولد من كلمة','مكتبة ملك أحمد سامي'];
+  const seq=items.map(t=>`<span>${t} <svg width="12" height="12" viewBox="0 0 24 24" fill="#C9A24B"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span>`).join('');
+  return `<div class="marquee" aria-hidden="true"><div class="mq-track">${seq}${seq}</div></div>`;
+}
+
+/* ============================================================
+   7) العروض (Views)
+============================================================ */
+function viewHome(){
+  const s=db.settings;
+  const books=db.books.filter(b=>b.status==='published');
+  const quotes=db.quotes.filter(q=>q.status==='published');
+  const dayQ=quotes.length?quotes[Math.floor((Date.now()/864e5))%quotes.length]:null;
+  const secs=Object.entries(s.sections).sort((a,b)=>a[1].order-b[1].order);
+  let html=`<section class="hero" id="home-top">
+    <div class="hero-deco">
+      <svg class="hd" style="top:12%;right:8%;width:70px" viewBox="0 0 64 64" fill="none"><path d="M10 42c6-3.4 14-3.4 22 1 8-4.4 16-4.4 22-1v12c-6-3.4-14-3.4-22 1-8-4.4-16-4.4-22-1z" fill="#F7CAD6" stroke="#C9A24B" stroke-width="1.5"/><path d="M32 43v11" stroke="#C9A24B" stroke-width="1.3"/></svg>
+      <svg class="hd" style="top:20%;left:7%;width:56px;animation-delay:1s" viewBox="0 0 24 24" fill="#D6EAFB"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+      <svg class="hd" style="bottom:22%;right:12%;width:44px;animation-delay:2s" viewBox="0 0 24 24" fill="#DDF3E4"><path d="M12 2c.6 4.8 3 7.2 8 8-5 .8-7.4 3.2-8 8-.6-4.8-3-7.2-8-8 5-.8 7.4-3.2 8-8z"/></svg>
+      <svg class="hd" style="bottom:30%;left:10%;width:38px;animation-delay:.5s" viewBox="0 0 24 24" fill="#E9E4FA"><circle cx="12" cy="12" r="9"/></svg>
+    </div>
+    <div class="container hero-in reveal">
+      <div class="hero-logo">${logoSVG(96)}</div>
+      <h1 class="hero-title">لكلِّ كلمةٍ <span class="grad">حكاية</span></h1>
+      <p class="hero-sub">${esc(s.heroSub)}</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#/books">${I.book} تصفّح الكتب</a>
+        <a class="btn btn-wa btn-lg" href="${s.whatsapp}" target="_blank" rel="noopener">${I.wa} تابعنا على واتساب</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>${books.length}</b><span>كتابٌ منشور</span></div>
+        <div class="hstat"><b>${quotes.length}</b><span>قولٌ حكيم</span></div>
+        <div class="hstat"><b>${db.team.length}</b><span>المساعدون</span></div>
+      </div>
+    </div>
+    <a class="scroll-ind" href="#home-books" aria-label="مرّر للأسفل"><span class="mouse"><span class="wheel"></span></span>مرّر للاستكشاف</a>
+  </section>${marquee()}`;
+  for(const[key,conf]of secs){
+    if(!conf.show)continue;
+    if(key==='books'){
+      html+=`<section class="block" id="home-books"><div class="container">${secHead('رفوف المكتبة','الكتب المنشورة','كلُّ كتابٍ هنا أُضيف بإذنٍ رسميٍّ من الإدارة — لا أكثر ولا أقل.')}<div class="books-grid">${books.slice(0,6).map(bookCard).join('')||`<div class="empty card" style="grid-column:1/-1"><div class="big">${I.book}</div>لم تُنشر كتبٌ بعد — ترقّبوا الجديد قريبًا.</div>`}</div><div style="text-align:center;margin-top:2rem"><a class="btn btn-ghost" href="#/books">جميع الكتب ${I.back}</a></div></div></section>`;
+    }
+    if(key==='quotes'){
+      if(!dayQ)continue;
+      html+=`<section class="block tint-lav" id="home-quotes"><div class="container">${secHead('ومضة اليوم','حكمة تستحق التأمل','')}<div class="qod reveal"><div class="q-mark">«</div><blockquote>${esc(dayQ.text)}</blockquote><div class="q-src">${esc(dayQ.source||'من رفوف المكتبة')}</div></div><div style="text-align:center;margin-top:2rem"><a class="btn btn-ghost" href="#/quotes">جميع الأقوال ${I.back}</a></div></div></section>${marquee()}`;
+    }
+    if(key==='team'){
+      const av=['cv-rose','cv-sky','cv-mint','cv-lav','cv-peach','cv-butter','cv-lav'];
+      html+=`<section class="block tint-mint" id="home-team"><div class="container">${secHead('عائلة المكتبة','مساعدو المكتبة','بقيادة المديرة ملك أحمد سامي')}<div class="team-grid">${db.team.map((t,i)=>`<div class="team-card reveal ${i===0?'owner':''}"><div class="avatar ${av[i%av.length]}">${esc(t.name.trim()[0])}</div><div class="nm">${esc(t.name)}</div><div class="rl"><span class="chip ${i===0?'chip-gold':i===1?'chip-sky':'chip-mint'}">${esc(t.role)}</span></div></div>`).join('')}</div><div style="text-align:center;margin-top:2rem"><a class="btn btn-ghost" href="#/team">تعرّف عليهم أكثر</a></div></div></section>`;
+    }
+    if(key==='about'){
+      html+=`<section class="block tint-butter" id="home-about"><div class="container"><div class="qod reveal" style="padding:2.4rem"><div class="sec-tag" style="margin-bottom:.6rem">قصة المكتبة</div><h2 class="sec-title" style="font-size:1.9rem">${esc(s.siteName)}</h2><p style="color:var(--muted);margin-top:.8rem;text-align:justify;line-height:2">${esc(s.aboutText.split('\n\n')[0])}</p><div style="margin-top:1.4rem"><a class="btn btn-primary" href="#/about">اقرأ المزيد</a></div></div></div></section>`;
+    }
+  }
+  html+=`<section class="block" style="text-align:center"><div class="container"><div class="card reveal" style="padding:2.6rem;background:linear-gradient(135deg,#FFF6E9,#FDECEF)">
+    <h2 class="sec-title">عندك خاطرٌ يستحقُّ الحكاية؟</h2>
+    <p style="color:var(--muted);margin:.6rem auto 1.4rem;max-width:520px">تابعونا على واتساب ليصلكم كلُّ جديدٍ من رفوف المكتبة.</p>
+    <a class="btn btn-wa btn-lg" href="${s.whatsapp}" target="_blank" rel="noopener">${I.wa} تابعنا على واتساب</a>
+  </div></div></section>`;
+  return html;
+}
+let bkFilter={cat:'الكل',q:''};
+function viewBooks(){
+  const list=db.books.filter(b=>b.status==='published')
+    .filter(b=>bkFilter.cat==='الكل'||b.category===bkFilter.cat)
+    .filter(b=>!bkFilter.q||b.title.includes(bkFilter.q));
+  return `${staffBanner()}<section class="block"><div class="container">
+    ${secHead('رفوف المكتبة','الكتب المنشورة','')}
+    <div class="card reveal" style="padding:1.2rem;margin-bottom:2rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center">
+      <div style="position:relative;flex:1;min-width:220px">${I.search.replace('class="icon"','class="icon" style="position:absolute;inset-inline-start:12px;top:50%;transform:translateY(-50%);color:var(--muted)"')}<input id="bkSearch" class="input" style="padding-inline-start:2.6rem" placeholder="ابحث باسم الكتاب..." value="${esc(bkFilter.q)}"></div>
+      <div style="display:flex;gap:.4rem;flex-wrap:wrap">${['الكل',...CATS].map(c=>`<button class="btn btn-sm ${bkFilter.cat===c?'btn-primary':'btn-ghost'}" data-act="bcat" data-cat="${c}">${c}</button>`).join('')}</div>
+    </div>
+    <div class="books-grid">${list.map(bookCard).join('')||`<div class="empty card" style="grid-column:1/-1"><div class="big">${I.book}</div>لا توجد كتبٌ منشورة${bkFilter.cat!=='الكل'?' في تصنيف «'+esc(bkFilter.cat)+'»':''} بعد.</div>`}</div>
+  </div></section>`;
+}
+function viewBookDetail(id){
+  const b=bookById(id);
+  if(!b||(b.status!=='published'&&!isStaff()))return viewNotFound();
+  b.views++;save();
+  const fav=isFav(b.id);
+  const vChip=b.fileType==='drive'?(b.verified==='ok'?'<span class="badge b-ok">تم التحقق من الرابط</span>':b.verified==='error'?'<span class="badge b-err">تعذّر الوصول للملف</span>':'<span class="badge b-pend">بانتظار التحقق</span>'):'<span class="badge b-ok">ملف مرفوع</span>';
+  return `${isStaff()&&b.fileType==='drive'&&b.verified==='error'?`<div class="container"><div class="alert alert-err">${I.warn}<div><b>تنبيه للمديرة:</b> تعذّر فتح ملف «${esc(b.title)}». عدّل صلاحيات المشاركة في Google Drive أو أعد رفع الملف من لوحة التحكم.</div></div></div>`:''}
+  <section class="block"><div class="container">
+    <a href="#/books" class="btn btn-sm btn-ghost" style="margin-bottom:1.4rem">${I.back} عود إلى الكتب</a>
+    <div class="bd-wrap">
+      <div class="bd-cover reveal">${coverHTML(b)}</div>
+      <div class="reveal">
+        <h1>${esc(b.title)}</h1>
+        <div class="bd-row"><span class="chip chip-sky">${esc(b.category)}</span>${vChip}<span class="chip chip-peach">${I.eye} ${b.views} قراءة</span></div>
+        <div class="bd-box">
+          <b style="font-family:var(--font-head);font-size:1.15rem">بطاقة الكتاب</b>
+          <p style="margin-top:.6rem;color:var(--muted)">
+            المؤلف: <b>${b.author?esc(b.author):'غير محدَّد — سيتحدَّث عنه لاحقًا'}</b><br>
+            التصنيف: <b>${esc(b.category)}</b><br>
+            تاريخ الإضافة: <b>${fmtDate(b.createdAt)}</b>
+          </p>
+          ${b.description?`<p style="margin-top:.8rem;line-height:2">${esc(b.description)}</p>`:'<p style="margin-top:.8rem;color:var(--muted)">وصف الكتاب سيُنشر قريبًا بإذنٍ من الإدارة.</p>'}
+        </div>
+        <div class="bd-actions">
+          <button class="btn btn-primary btn-lg" data-act="read" data-id="${b.id}">${I.book} اقرأ داخل المكتبة</button>
+          ${b.fileType==='drive'?`<a class="btn btn-ghost btn-lg" href="${b.fileUrl}" target="_blank" rel="noopener">${I.ext} فتح في Google Drive</a>`:`<a class="btn btn-ghost btn-lg" href="${b.fileData}" download="${esc(b.fileName||b.title+'.pdf')}">${I.dl} تحميل الملف</a>`}
+          <button class="btn ${fav?'btn-danger':'btn-ghost'} btn-lg" data-act="fav" data-id="${b.id}">${fav?I.heartFill:I.heart} ${fav?'إزالة من المفضلة':'إضافة للمفضلة'}</button>
+        </div>
+      </div>
+    </div>
+  </div></section>`;
+}
+function viewReader(id){
+  const b=bookById(id);
+  if(!b||(b.status!=='published'&&!isStaff()))return viewNotFound();
+  const src=b.fileType==='drive'?`https://drive.google.com/file/d/${b.fileId}/preview`:(b.fileData||'');
+  return `<section class="block"><div class="container">
+    <div class="reader-bar">
+      <a class="btn btn-sm btn-ghost" href="#/book/${b.id}">${I.back} عود لتفاصيل الكتاب</a>
+      <h1 style="font-size:1.5rem">${esc(b.title)}</h1>
+      <span style="flex:1"></span>
+      ${b.fileType==='drive'?`<a class="btn btn-sm btn-ghost" href="${b.fileUrl}" target="_blank" rel="noopener">${I.ext} فتح في Drive</a><a class="btn btn-sm btn-ghost" href="https://drive.google.com/uc?export=download&id=${b.fileId}" target="_blank" rel="noopener">${I.dl} تحميل</a>`:`<a class="btn btn-sm btn-ghost" href="${b.fileData}" download="${esc(b.fileName||b.title+'.pdf')}">${I.dl} تحميل</a>`}
+    </div>
+    <div class="reader-frame reveal">
+      ${src?`<iframe src="${src}" title="قارئ ${esc(b.title)}" loading="lazy"></iframe>`:'<div class="empty">الملف غير متاح حاليًا.</div>'}
+    </div>
+    <div class="alert alert-warn" style="margin-top:1rem">${I.warn}<div>إذا لم يُفتح الكتاب داخل القارئ، استخدم زر «فتح في Drive» أو «تحميل» أعلاه — قد تتطلب بعض الملفات فتح الرابط مباشرة.</div></div>
+  </div></section>`;
+}
+function viewQuotes(){
+  const list=db.quotes.filter(q=>q.status==='published');
+  return `<section class="block tint-lav"><div class="container">
+    ${secHead('ومضات الحكمة','الأقوال والحِكم','أقوالٌ تختارها الإدارة ونصوصٌ أصليّة من فريق المكتبة — لا شيء غير موثوق.')}
+    ${list.length?`<div class="quotes-grid">${list.map(q=>`<div class="quote-card reveal"><p>«${esc(q.text)}»</p><div class="q-src">${esc(q.source||'من رفوف المكتبة')}</div></div>`).join('')}</div>`
+      :`<div class="empty card"><div class="big">${I.quote}</div>لم تنشر الإدارة أي قولٍ بعد — ترقّبوا ومضة اليوم قريبًا.</div>`}
+  </div></section>`;
+}
+function viewAbout(){
+  const s=db.settings;
+  return `<section class="block"><div class="container">
+    ${secHead('قصتنا',esc(s.aboutTitle),'')}
+    <div class="qod reveal" style="text-align:right;padding:2.6rem">
+      ${s.aboutText.split('\n\n').map(p=>`<p style="line-height:2.1;margin-bottom:1rem">${esc(p)}</p>`).join('')}
+    </div>
+    <div class="values">
+      <div class="value-card reveal"><div class="vi" style="background:var(--pink)">${I.book}</div><b style="font-family:var(--font-head);font-size:1.2rem">أصالة</b><p style="color:var(--muted);font-size:.9rem;margin-top:.4rem">نعرض فقط ما أُضيف فعليًا بإذنٍ رسمي — لا اختلاق ولا مجهول المصدر.</p></div>
+      <div class="value-card reveal"><div class="vi" style="background:var(--sky)">${I.shield}</div><b style="font-family:var(--font-head);font-size:1.2rem">احترافية</b><p style="color:var(--muted);font-size:.9rem;margin-top:.4rem">إدارة واضحة الصلاحيات، سجل عمليات شفاف، وخصوصية محفوظة للقرّاء.</p></div>
+      <div class="value-card reveal"><div class="vi" style="background:var(--mint)">${I.heart}</div><b style="font-family:var(--font-head);font-size:1.2rem">رقّة</b><p style="color:var(--muted);font-size:.9rem;margin-top:.4rem">تصميمٌ هادئ الألوان يقرّب القارئ من الكلمة قبل أن يقرأها.</p></div>
+    </div>
+  </div></section>`;
+}
+const AVC=['cv-rose','cv-sky','cv-mint','cv-lav','cv-peach','cv-butter','cv-lav'];
+function viewTeam(){
+  return `<section class="block tint-mint"><div class="container">
+    ${secHead('عائلة المكتبة','مساعدو المكتبة','بقيادة المديرة ملك أحمد سامي، وبدعم المساعدين وعلى رأسهم مصطفى حواس.')}
+    <div class="team-grid">${db.team.map((t,i)=>`<div class="team-card reveal ${i===0?'owner':''}"><div class="avatar ${AVC[i%AVC.length]}">${esc(t.name.trim()[0])}</div><div class="nm">${esc(t.name)}</div><div class="rl"><span class="chip ${i===0?'chip-gold':i===1?'chip-sky':'chip-mint'}">${esc(t.role)}</span></div></div>`).join('')}</div>
+  </div></section>`;
+}
+function viewContact(){
+  const s=db.settings;
+  return `<section class="block"><div class="container">
+    ${secHead('تواصل','راسلونا','للاقتراحات أو التصاريح أو أي استفسار — نقرأ كل رسالة.')}
+    <div class="bd-wrap" style="grid-template-columns:1fr 1fr">
+      <div class="card reveal" style="padding:2rem">
+        <h3 style="margin-bottom:1.2rem">${I.mail} أرسل رسالة</h3>
+        <form id="contactForm">
+          <div class="f-row"><label class="f">الاسم</label><input class="input" name="cname" required maxlength="60" placeholder="اسمك الكريم"></div>
+          <div class="f-row"><label class="f">البريد (اختياري)</label><input class="input" name="cemail" type="email" placeholder="example@mail.com" dir="ltr"></div>
+          <div class="f-row"><label class="f">رسالتك</label><textarea class="input" name="cmsg" rows="5" required maxlength="1000" placeholder="اكتب رسالتك هنا..."></textarea></div>
+          <button class="btn btn-primary" type="submit">${I.send||''} إرسال الرسالة</button>
+          <p style="font-size:.78rem;color:var(--muted);margin-top:.8rem">تُحفظ الرسائل حاليًا على هذا الجهاز؛ عند ربط الخادم المركزي تصل إلى الإدارة مباشرةً.</p>
+        </form>
+      </div>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:1.2rem">
+        <div class="card" style="padding:1.8rem;text-align:center;background:linear-gradient(135deg,#E9F7EE,#FFF6E9)">
+          <h3 style="margin-bottom:.5rem">تفضّل الدردشة السريعة؟</h3>
+          <p style="color:var(--muted);font-size:.92rem;margin-bottom:1.2rem">تابعونا على واتساب ليصلكم كلُّ جديدٍ من رفوف المكتبة.</p>
+          <a class="btn btn-wa btn-lg" href="${db.settings.whatsapp}" target="_blank" rel="noopener">${I.wa} تابعنا على واتساب</a>
+        </div>
+        <div class="card" style="padding:1.8rem">
+          <b style="font-family:var(--font-head);font-size:1.15rem">إدارة المكتبة</div>
+          <p style="margin-top:.6rem;color:var(--muted);font-size:.95rem">المديرة: <b style="color:var(--ink)">ملك أحمد سامي</b><br>المساعد الأساسي: <b style="color:var(--ink)">مصطفى حواس</b><br>${db.settings.email?`البريد: <span dir="ltr">${esc(db.settings.email)}</span><br>`:''}للتواصل الفوري عبر واتساب اضغط الزر أعلاه.</p>
+        </div>
+      </div>
+    </div>
+  </div></section>`;
+}
+function viewLogin(){
+  const u=curUser();
+  const showSetup=db.users.some(x=>x.mustChange);
+  return `<section class="block"><div class="auth-wrap reveal">
+    <div class="auth-card">
+      <div style="text-align:center">${logoSVG(64)}</div>
+      <h1>أهلًا بعودتك</h1>
+      <p class="sub">سجّل دخولك لتصفّح مفضلتك وإدارة ملفك</p>
+      ${showSetup?`<div class="setup-card"><b>الإعداد الأوّلي (مرة واحدة):</b><br>المديرة — البريد: <span dir="ltr">queen@kkh.local</span> / كلمة المرور: <code dir="ltr">Malik-2024!</code><br>المساعد — البريد: <span dir="ltr">mostafa@kkh.local</span> / كلمة المرور: <code dir="ltr">Mustafa-2024!</code><br><small>سيُطلب تغيير كلمة المرور فور الدخول الأول.</small></div>`:''}
+      <form id="loginForm">
+        <div class="f-row"><label class="f">البريد الإلكتروني</label><input class="input" name="email" type="email" required dir="ltr" placeholder="example@mail.com"></div>
+        <div class="f-row"><label class="f">كلمة المرور</label><input class="input" name="pass" type="password" required minlength="6" placeholder="••••••••"></div>
+        <div class="f-err" id="loginErr"></div>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">${I.lock} تسجيل الدخول</button></div>
+      </form>
+      <div class="auth-alt">ليس لديك حساب؟ <a href="#/register">أنشئ حسابًا</a> — <a href="#/recover">نسيت كلمة المرور؟</a></div>
+    </div>
+  </div></section>`;
+}
+function viewRegister(){
+  return `<section class="block"><div class="auth-wrap reveal">
+    <div class="auth-card">
+      <div style="text-align:center">${logoSVG(64)}</div>
+      <h1>إنشاء حساب جديد</h1>
+      <p class="sub">انضم إلى قرّاء المكتبة — مجانًا ودون بياناتٍ زائدة</p>
+      <form id="regForm">
+        <div class="f-row"><label class="f">الاسم الكامل</label><input class="input" name="name" required minlength="3" maxlength="60" placeholder="اسمك الكريم"></div>
+        <div class="f-row"><label class="f">البريد الإلكتروني</label><input class="input" name="email" type="email" required dir="ltr" placeholder="example@mail.com"></div>
+        <div class="f-row"><label class="f">كلمة المرور</label><input class="input" name="pass" type="password" required minlength="8" placeholder="8 أحرف على الأقل، مع حرفٍ ورقم"><small style="color:var(--muted)">حروف إنجليزية + أرقام، 8 أحرف على الأقل.</small></div>
+        <div class="f-row"><label class="f">تأكيد كلمة المرور</label><input class="input" name="pass2" type="password" required minlength="8"></div>
+        <div class="f-err" id="regErr"></div>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">${I.user} إنشاء الحساب</button></div>
+      </form>
+      <div class="auth-alt">لديك حساب؟ <a href="#/login">سجّل دخولك</a></div>
+    </div>
+  </div></section>`;
+}
+function viewRecover(){
+  return `<section class="block"><div class="auth-wrap reveal">
+    <div class="auth-card">
+      <div style="text-align:center">${logoSVG(64)}</div>
+      <h1>استعادة كلمة المرور</h1>
+      <p class="sub">أدخل بريدك المسجّل وسنرسل لك رابط إعادة التعيين</p>
+      <form id="recForm">
+        <div class="f-row"><label class="f">البريد الإلكتروني</label><input class="input" name="email" type="email" required dir="ltr"></div>
+        <div class="f-err" id="recMsg"></div>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">${I.mail} إرسال رابط الاستعادة</button></div>
+      </form>
+      <div class="auth-alt"><a href="#/login">عدود إلى تسجيل الدخول</a></div>
+    </div>
+  </div></section>`;
+}
+function viewReset(token){
+  const r=db.resets.find(x=>x.token===token&&!x.used&&x.exp>Date.now());
+  if(!r)return`<section class="block"><div class="auth-wrap"><div class="card empty"><div class="big">${I.warn}</div>رابط الاستعادة غير صالح أو منتهٍ — جرّب طلب رابطٍ جديدًا.</div></div></section>`;
+  return `<section class="block"><div class="auth-wrap reveal">
+    <div class="auth-card">
+      <div style="text-align:center">${logoSVG(64)}</div>
+      <h1>كلمة مرور جديدة</h1>
+      <p class="sub">لكشف حساب: <span dir="ltr">${esc(r.email)}</span></p>
+      <form id="resetForm" data-token="${token}">
+        <div class="f-row"><label class="f">كلمة المرور الجديدة</label><input class="input" name="pass" type="password" required minlength="8"></div>
+        <div class="f-row"><label class="f">تأكيد كلمة المرور</label><input class="input" name="pass2" type="password" required minlength="8"></div>
+        <div class="f-err" id="resetMsg"></div>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">${I.lock} حفظ كلمة المرور</button></div>
+      </form>
+    </div>
+  </div></section>`;
+}
+function viewProfile(){
+  const u=curUser();if(!u){go('#/login');return'';}
+  const favs=(db.favorites[u.id]||[]).map(bookById).filter(Boolean);
+  return `<section class="block"><div class="container">
+    ${secHead('ملفي الشخصي','الملف الشخصي','')}
+    <div class="bd-wrap" style="grid-template-columns:1fr 1.4fr">
+      <div class="card reveal" style="padding:2rem;text-align:center">
+        <div class="avatar ${u.role==='owner'?'cv-butter':u.role==='assistant'?'cv-sky':'cv-rose'}" style="width:90px;height:90px;font-size:2.2rem">${esc(u.name.trim()[0])}</div>
+        <h2 style="font-size:1.5rem;margin-top:.6rem">${esc(u.name)}</h2>
+        <div class="bd-row" style="justify-content:center"><span class="badge ${u.role==='owner'?'b-owner':u.role==='assistant'?'b-asst':'b-reader'}">${u.role==='owner'?'المديرة':u.role==='assistant'?'مساعد':'قارئ'}</span></div>
+        <p style="color:var(--muted);font-size:.88rem;margin-top:.6rem">عضوٌ منذ ${fmtDate(u.createdAt)}</p>
+        <div class="hero-stats" style="margin-top:1.2rem">
+          <div class="hstat"><b>${favs.length}</b><span>مفضلة</span></div>
+          <div class="hstat"><b>${db.books.filter(b=>b.addedBy===u.id).length}</b><span>إسهامات</span></div>
+        </div>
+      </div>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:1.4rem">
+        ${u.mustChange?`<div class="alert alert-warn">${I.warn}<div><b>تنبيه:</b> يُرجى تغيير كلمة المرور المؤقتة لحسابك من الأسفل.</div></div>`:''}
+        <div class="card" style="padding:1.8rem">
+          <h3 style="margin-bottom:1rem">${I.user} تعديل البيانات</h3>
+          <form id="profileForm">
+            <div class="f-row"><label class="f">الاسم</label><input class="input" name="name" required minlength="3" value="${esc(u.name)}"></div>
+            <div class="f-row"><label class="f">البريد</label><input class="input" name="email" type="email" required dir="ltr" value="${esc(u.email)}"></div>
+            <button class="btn btn-primary btn-sm" type="submit">${I.check} حفظ التغييرات</button>
+          </form>
+        </div>
+        <div class="card" style="padding:1.8rem">
+          <h3 style="margin-bottom:1rem">${I.lock} تغيير كلمة المرور</h3>
+          <form id="passForm">
+            <div class="f-row"><label class="f">كلمة المرور الحالية</label><input class="input" name="old" type="password" required></div>
+            <div class="f-row"><label class="f">الجديدة</label><input class="input" name="np" type="password" required minlength="8"></div>
+            <div class="f-row"><label class="f">تأكيد الجديدة</label><input class="input" name="np2" type="password" required minlength="8"></div>
+            <div class="f-err" id="passErr"></div>
+            <button class="btn btn-ghost btn-sm" type="submit">${I.check} تحديث كلمة المرور</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div></section>`;
+}
+function viewFavorites(){
+  const u=curUser();if(!u){go('#/login');return'';}
+  const favs=(db.favorites[u.id]||[]).map(bookById).filter(b=>b&&b.status==='published');
+  return `<section class="block"><div class="container">
+    ${secHead('مفضلتي','كتبك المفضلة','')}
+    <div class="books-grid">${favs.map(bookCard).join('')||`<div class="empty card" style="grid-column:1/-1"><div class="big">${I.heart}</div>لا توجد كتبٌ في مفضلتك بعد — أضف كتابًا بضغطة قلبٍ من بطاقته.</div>`}</div>
+  </div></section>`;
+}
+function viewLegal(kind){
+  const isP=kind==='privacy';
+  return `<section class="block"><div class="container" style="max-width:820px">
+    ${secHead(isP?'الخصوصية':'الشروط',isP?'سياسة الخصوصية':'شروط الاستخدام','')}
+    <div class="card reveal" style="padding:2.4rem;line-height:2.1">
+      ${isP?`
+      <p><b>1. البيانات التي نجمعها:</b> نحتفظ فقط بالحدّ الأدنى اللازم لتشغيل حسابك: الاسم والبريد الإلكتروني وكلمة المرور (مجزّأة) ومفضلتك من الكتب. لا نجمع موقعك أو بيانات جهازك أو أي شيءٍ غير ذلك.</p>
+      <p><b>2. ماذا لا نفعل أبدًا:</b> لا نبيع بياناتك ولا نشاركها مع أطرافٍ ثالثة ولا نستخدمها لأي غرضٍ غير تشغيل حسابك وتجربتك في المكتبة.</p>
+      <p><b>3. خصوصية القراءة:</b> قائمة مفضلتك خاصة بحسابك وحده ولا تظهر للزوار.</p>
+      <p><b>4. المحتوى:</b> جميع الكتب والأقوال تُضاف بإذنٍ رسميٍّ من الإدارة؛ إن كان لك حقٌّ في أي محتوى معروض فأخبرنا وسنراجعه فورًا.</p>
+      <p><b>5. التخزين:</b> في هذه النسخة تُحفظ البيانات محليًا على جهازك؛ عند الانتقال إلى الخادم المركزي ستُحدَّث هذه السياسة بما يضمن الحماية الكاملة.</p>`
+      :`
+      <p><b>1. الاستخدام الصحيح:</b> تُستخدم المكتبة للاطلاع والقراءة فقط. يمنع إعادة نشر المحتوى أو تحميله دون إذنٍ كتابيٍّ من الإدارة.</p>
+      <p><b>2. الحساب:</b> أنت مسؤول عن سرية حسابك وكلمة مرورك. يمنع إنشاء حسابات متعددة أو محاولة اختراق الحسابات الأخرى — أي محاولاتٍ متكررةٍ تُوقَّف مؤقتًا تلقائيًا.</p>
+      <p><b>3. الصلاحيات:</b> الحسابات القرائية للتصفح والمفضلة فقط. النشر والتعديل والحذف محصورٌ بالمديرة ومساعدها المعتمد.</p>
+      <p><b>4. المحتوى:</b> المكتبة لا تضمن دقة المحتوى المرفوع من مصادرٍ خارجية (كروابط Google Drive) وتُعرض كما هو بإذنٍ من صاحبه.</p>
+      <p><b>5. التغييرات:</b> يحق للإدارة تعديل هذه الشروط أو إيقاف أي خدمةٍ دون إشعارٍ مسبق.</p>`}
+    </div>
+  </div></section>`;
+}
+function viewNotFound(){
+  return `<section class="block"><div class="container"><div class="card empty reveal" style="padding:4rem"><div class="big">${I.search}</div><h2>الصفحة غير موجودة</h2><p>ربما نُقلت هذه الصفحة أو لم تُنشر بعد.</p><a class="btn btn-primary" href="#/">العودة للرئيسية</a></div></div></section>`;
+}
+
+/* ============================================================
+   8) لوحة التحكم السرية
+============================================================ */
+function viewAdmin(tab){
+  if(!curUser()){toast('يرجى تسجيل الدخول أولًا','warn');go('#/login');return'';}
+  if(!isStaff())return viewNotFound();
+  const u=curUser();
+  const tabs=[['dashboard','لوحة التحكم',I.shield],['books','الكتب',I.book],['quotes','الأقوال',I.quote]];
+  if(isOwner())tabs.push(['users','المستخدمون',I.users],['messages','الرسائل',I.msg],['settings','إعدادات الموقع',I.gear]);
+  tabs.push(['logs','سجل العمليات',I.log]);
+  let body='';
+  if(tab==='dashboard'){
+    const pub=db.books.filter(b=>b.status==='published').length;
+    const q=db.quotes.filter(x=>x.status==='published').length;
+    body=`<div class="stat-grid">
+      <div class="stat-card"><b>${pub}</b><span>كتاب منشور</span></div>
+      <div class="stat-card"><b>${db.books.length-pub}</b><span>كتاب مخفي</span></div>
+      <div class="stat-card"><b>${q}</b><span>قولٌ منشور</span></div>
+      <div class="stat-card"><b>${db.users.length}</b><span>حسابٌ مسجّل</span></div>
+      <div class="stat-card"><b>${Object.values(db.favorites).flat().length}</b><span>مفضلة</span></div>
+      <div class="stat-card"><b>${db.messages.length}</b><span>رسالة</span></div>
+    </div>
+    <div class="card" style="padding:1.6rem;margin-bottom:1.4rem"><h3 style="margin-bottom:.8rem">${I.log} أحدث العمليات</h3>
+      ${db.activity.slice(0,8).map(a=>`<div style="display:flex;gap:.8rem;padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.9rem"><span style="color:var(--muted)">${fmtDate(a.at)}</span><b>${esc(a.by)}</b><span>${esc(a.act)}</span></div>`).join('')||'<p style="color:var(--muted)">لا توجد عمليات بعد.</p>'}
+    </div>
+    <div class="admin-note">${I.info} نسخة تجريبية: تُحفظ البيانات محليًا على هذا الجهاز (localStorage). للنشر الفعلي يلزم ربط خادمٍ وقاعدة بياناتٍ مركزية — راجع ملاحظات التسليم.</div>`;
+  }
+  if(tab==='books'){
+    body=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem">
+      <p style="color:var(--muted)">${db.books.length} كتابًا في المكتبة</p>
+      <button class="btn btn-primary" data-act="bk-new">${I.plus} إضافة كتاب</button></div>
+      <div class="tbl-wrap"><table class="tbl"><thead><tr><th>الغلاف</th><th>العنوان</th><th>التصنيف</th><th>الحالة</th><th>الملف</th><th>إجراءات</th></tr></thead><tbody>
+      ${db.books.map(b=>`<tr>
+        <td><span class="mini-cover cv-${b.cover||'rose'}">${esc(b.title.slice(0,12))}</span></td>
+        <td><b>${esc(b.title)}</b>${b.author?`<br><small style="color:var(--muted)">${esc(b.author)}</small>`:''}</td>
+        <td><span class="chip chip-sky">${esc(b.category)}</span></td>
+        <td>${b.status==='published'?'<span class="badge b-ok">منشور</span>':'<span class="badge b-hide">مخفي</span>'}</td>
+        <td>${b.fileType==='drive'?(b.verified==='ok'?'<span class="badge b-ok">متاح</span>':b.verified==='error'?'<span class="badge b-err">تعذّر الوصول</span>':'<span class="badge b-pend">بانتظار التحقق</span>'):'<span class="badge b-ok">مرفوع</span>'}</td>
+        <td><div class="row-acts">
+          <button class="btn btn-sm btn-ghost" data-act="bk-edit" data-id="${b.id}">${I.edit} تعديل</button>
+          <button class="btn btn-sm btn-ghost" data-act="bk-toggle" data-id="${b.id}">${b.status==='published'?I.eyeOff+' إخفاء':I.eye+' نشر'}</button>
+          ${b.fileType==='drive'?`<button class="btn btn-sm btn-ghost" data-act="bk-verify" data-id="${b.id}" title="التحقق من الرابط">${I.refresh} تحقق</button>`:''}
+          <button class="btn btn-sm btn-danger" data-act="bk-del" data-id="${b.id}">${I.trash}</button>
+        </div></td></tr>`).join('')||'<tr><td colspan="6" class="empty">لا توجد كتب بعد — أضف أول كتابٍ من الزر أعلاه.</td></tr>'}
+      </tbody></table></div>`;
+  }
+  if(tab==='quotes'){
+    body=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem">
+      <p style="color:var(--muted)">${db.quotes.length} قولًا</p>
+      <button class="btn btn-primary" data-act="q-new">${I.plus} إضافة قول</button></div>
+      <div class="tbl-wrap"><table class="tbl"><thead><tr><th>النص</th><th>المصدر</th><th>الحالة</th><th>إجراءات</th></tr></thead><tbody>
+      ${db.quotes.map(q=>`<tr><td style="max-width:340px">«${esc(q.text)}»</td><td>${esc(q.source||'—')}</td>
+        <td>${q.status==='published'?'<span class="badge b-ok">منشور</span>':'<span class="badge b-hide">مخفي</span>'}</td>
+        <td><div class="row-acts">
+          <button class="btn btn-sm btn-ghost" data-act="q-edit" data-id="${q.id}">${I.edit}</button>
+          <button class="btn btn-sm btn-ghost" data-act="q-toggle" data-id="${q.id}">${q.status==='published'?I.eyeOff:I.eye}</button>
+          <button class="btn btn-sm btn-danger" data-act="q-del" data-id="${q.id}">${I.trash}</button>
+        </div></td></tr>`).join('')||'<tr><td colspan="4" class="empty">لا توجد أقوال بعد.</td></tr>'}
+      </tbody></table></div>`;
+  }
+  if(tab==='users'){
+    if(!isOwner())return viewNotFound();
+    body=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem">
+      <p style="color:var(--muted)">${db.users.length} حسابًا مسجّلًا</p>
+      <button class="btn btn-primary" data-act="u-new">${I.plus} إضافة حساب</button></div>
+      <div class="tbl-wrap"><table class="tbl"><thead><tr><th>الاسم</th><th>البريد</th><th>الدور</th><th>الحالة</th><th>آخر دخول</th><th>إجراءات</th></tr></thead><tbody>
+      ${db.users.map(x=>`<tr><td><b>${esc(x.name)}</b></td><td dir="ltr">${esc(x.email)}</td>
+        <td><span class="badge ${x.role==='owner'?'b-owner':x.role==='assistant'?'b-asst':'b-reader'}">${x.role==='owner'?'المديرة':x.role==='assistant'?'مساعد':'قارئ'}</span></td>
+        <td>${x.active?'<span class="badge b-ok">نشط</span>':'<span class="badge b-hide">معطّل</span>'}</td>
+        <td>${x.lastLogin?fmtDate(x.lastLogin):'—'}</td>
+        <td><div class="row-acts">
+          ${x.role!=='owner'?`<button class="btn btn-sm btn-ghost" data-act="u-role" data-id="${x.id}">${I.shield} ${x.role==='assistant'?'إلغاء المساعدة':'جعله مساعدًا'}</button>`:''}
+          ${x.role!=='owner'?`<button class="btn btn-sm btn-ghost" data-act="u-toggle" data-id="${x.id}">${x.active?'تعطيل':'تفعيل'}</button>
+          <button class="btn btn-sm btn-danger" data-act="u-del" data-id="${x.id}">${I.trash}</button>`:'<small style="color:var(--muted)">حساب محمي</small>'}
+        </div></td></tr>`).join('')}
+      </tbody></table></div>
+      <div class="admin-note">${I.info} المديرة (ملك أحمد سامي) لا يمكن تعطيلها أو حذفها أو سحب صلاحياتها. المساعد لا يستطيع إدارة المستخدمين.</div>`;
+  }
+  if(tab==='messages'){
+    if(!isOwner())return viewNotFound();
+    body=`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>الاسم</th><th>البريد</th><th>الرسالة</th><th>التاريخ</th><th>إجراءات</th></tr></thead><tbody>
+      ${db.messages.map(m=>`<tr><td><b>${esc(m.name)}</b></td><td dir="ltr">${esc(m.email||'—')}</td><td style="max-width:300px">${esc(m.msg)}</td><td>${fmtDate(m.at)}</td>
+        <td><div class="row-acts">${m.read?'<span class="badge b-ok">تمت القراءة</span>':`<button class="btn btn-sm btn-ghost" data-act="m-read" data-id="${m.id}">${I.check} قُرئت</button>`}
+        <button class="btn btn-sm btn-danger" data-act="m-del" data-id="${m.id}">${I.trash}</button></div></td></tr>`).join('')||'<tr><td colspan="5" class="empty">لا توجد رسائل بعد.</td></tr>'}
+      </tbody></table></div>`;
+  }
+  if(tab==='settings'){
+    if(!isOwner())return viewNotFound();
+    const s=db.settings;
+    body=`<div class="card" style="padding:2rem;max-width:720px">
+      <form id="settingsForm">
+        <div class="f-row"><label class="f">اسم الموقع</label><input class="input" name="siteName" value="${esc(s.siteName)}" required></div>
+        <div class="f-row"><label class="f">عبارة الترحيب (الرئيسية)</label><textarea class="input" name="heroSub" rows="2">${esc(s.heroSub)}</textarea></div>
+        <div class="f-row"><label class="f">نص صفحة «عن المكتبة»</label><textarea class="input" name="aboutText" rows="6">${esc(s.aboutText)}</textarea></div>
+        <div class="f-row"><label class="f">لون التمييز</label><div style="display:flex;gap:.6rem;flex-wrap:wrap">${Object.entries(ACCENTS).map(([k,v])=>`<label style="cursor:pointer"><input type="radio" name="accent" value="${k}" ${s.accent===k?'checked':''} style="display:none"><span style="display:inline-block;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,${v[0]},${v[1]});border:3px solid ${s.accent===k?'#C9A24B':'transparent'};box-shadow:var(--shadow)"></span></label>`).join('')}</div></div>
+        <div class="f-row"><label class="f">أقسام الصفحة الرئيسية (العرض والترتيب)</label>
+          ${Object.entries(s.sections).map(([k,c])=>`<div style="display:flex;align-items:center;gap:.8rem;padding:.5rem 0;border-bottom:1px dashed var(--line)">
+            <input type="checkbox" name="sec-${k}" ${c.show?'checked':''} id="sec-${k}"><label for="sec-${k}" style="flex:1">${{books:'الكتب المنشورة',quotes:'ومضة اليوم',team:'المساعدون',about:'عن المكتبة'}[k]}</label>
+            <input type="number" name="ord-${k}" value="${c.order}" min="1" max="4" class="input" style="width:70px" aria-label="ترتيب"></div>`).join('')}
+        </div>
+        <div class="f-row"><label class="f">رابط واتساب</label><input class="input" name="whatsapp" value="${esc(s.whatsapp)}" dir="ltr"></div>
+        <div class="f-row"><label class="f">بريد التواصل (اختياري)</label><input class="input" name="email" type="email" value="${esc(s.email)}" dir="ltr"></div>
+        <button class="btn btn-primary" type="submit">${I.check} حفظ الإعدادات</button>
+      </form>
+    </div>`;
+  }
+  if(tab==='logs'){
+    body=`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>الوقت</th><th>المنفّذ</th><th>العملية</th></tr></thead><tbody>
+      ${db.activity.map(a=>`<tr><td>${fmtDate(a.at)}</td><td><b>${esc(a.by)}</b></td><td>${esc(a.act)}</td></tr>`).join('')||'<tr><td colspan="3" class="empty">لا يوجد سجل بعد.</td></tr>'}
+      </tbody></table></div>`;
+  }
+  return `<section class="block"><div class="container"><div class="admin-wrap">
+    <aside class="admin-side">
+      <div class="a-brand">${logoSVG(34)} لوحة
